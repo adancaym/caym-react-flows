@@ -1,0 +1,33 @@
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 99; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: progress; /* Add a pointer on hover */
+}
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width:6em;
+    height:6em;
+    border-radius: 50%;
+    border-left-color: #09f;
+    position: relative;
+    top: 47vh;
+    left: 47vw;
+    color: red;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,73 @@
+#overlay-custom-modal {
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    z-index: 100; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.custom-modal {
+    background: #fff;
+    width: 40%;
+    border-radius: 16px;
+    position: relative;
+    top: 20%;
+    left: 30%;
+}
+
+.custom-modal-actions {
+    width: 100%;
+    text-align: right;
+    padding: .5em;
+}
+.custom-modal-actions > a {
+    text-align: right;
+}
+.custom-modal-body {
+    width: 100%;
+    padding: 2em;
+    text-align: center;
+}
+
+
+.custom-modal-header {
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    border-bottom: 1px solid #DDD !important;
+    text-align: center;
+}
+
+.custom-modal-header-left {
+    vertical-align: center;
+    float: left;
+    width: 100%;
+    padding: .5em;
+    text-align: left;
+
+}
+.custom-modal-header-right {
+    float: right;
+    width: 100%;
+}
+.custom-modal-footer {
+    width: 100%;
+    padding: 0 1em;
+    border-top: 1px solid #DDD !important;
+    text-align: center;
+}
+
+.btns-custom-modal {
+    width: 100%;
+    padding: 1em;
+    text-align: right;
+}
+
+.btns-custom-modal > .btn{
+    margin-left: 1em;
+}
+
