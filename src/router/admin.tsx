@@ -1,6 +1,6 @@
 import {lazy} from "react";
-import {RouterInterface} from "./index";
 import Admin from '../layouts/admin/Admin'
+import {RouterInterface} from "./types";
 
 const Home = lazy(() => import('../pages/public/home/Home'))
 

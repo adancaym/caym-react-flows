@@ -1,3 +1,43 @@
 nav {
+    width: 100vw;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+nav > ul {
+    width: 90%;
+    margin-left: 5%;
+}
+
+nav > ul > li {
+    width: 10%;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: normal;
     height: 10vh;
 }
+nav > ul > li > a  {
+    text-decoration: none;
+    padding: 1.5em;
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: black;
+    height: 10vh;
+}
+
+nav > ul > li > span {
+    font-size: 1.5em;
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: black;
+    height: 10vh;
+    margin-top: .63em;
+}
+
+nav > ul > li > a:hover, nav > ul > li > span:hover {
+    color: black;
+}
+
+

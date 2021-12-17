@@ -1,5 +1,5 @@
 import './Modal.css'
-import {Children, CSSProperties, useEffect, useState} from "react";
+import { CSSProperties, useEffect, useState} from "react";
 
 type FunctionalComponent = JSX.Element | JSX.Element[] | ((props: any) => JSX.Element);
 
@@ -11,6 +11,8 @@ interface ChildrenProps {
     footer?: FunctionalComponent;
 }
 
+export type SizeModal = 'sm' | 'md' | 'lg';
+
 interface ModalProps {
     children: ChildrenProps | FunctionalComponent;
     onAccept?: () => void;
@@ -20,12 +22,14 @@ interface ModalProps {
     textButtonAccept?: string;
     textButtonCancel?: string;
     textButtonTrigger?: string;
+    size?: SizeModal;
 }
 
 
 export const Modal = (
     {
         children,
+        size = 'md',
         onCancel,
         onAccept,
         buttonStyle,
@@ -118,11 +122,29 @@ export const Modal = (
             <button onClick={() => cancel()} className={'btn btn-primary'}>{textButtonAccept}</button>
         </div>)
     }
+
+    const getWidth =  (): CSSProperties => {
+        let width = '40%'
+        let left = '30%';
+        if (size === 'md') {
+            width = '40%';
+            left = '30%';
+        }
+        if (size === 'sm') {
+            width = '20%';
+            left = '40%';
+        }
+        if (size === 'lg') {
+            width = '60%';
+            left = '20%';
+        }
+        return {width, left}
+    }
     return (
         <>
             {renderComponentTrigger()}
             {show && <div id="overlay-custom-modal">
-                <div className="custom-modal" onClick={() => null}>
+                <div style={getWidth()} className="custom-modal" onClick={() => null}>
                     {renderComponentHeader()}
                     {renderComponentBody()}
                     {renderComponentFooter()}

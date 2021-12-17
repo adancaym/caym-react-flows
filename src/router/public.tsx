@@ -1,7 +1,7 @@
 import {lazy} from "react";
 
-import {RouterInterface} from "./index";
 import Public from "../layouts/public/Public";
+import {RouterInterface} from "./types";
 
 const About = lazy(() => import('../pages/public/about/About'))
 const Home = lazy(() => import('../pages/public/home/Home'))

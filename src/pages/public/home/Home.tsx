@@ -1,5 +1,4 @@
 import {Modal} from "../../../components/Modal/Modal";
-
 export const Home = () => {
     return <div>
         <h1>
@@ -12,6 +11,5 @@ export const Home = () => {
         </Modal>
     </div>
 }
-
 export default Home;
 

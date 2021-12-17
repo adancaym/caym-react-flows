@@ -12,12 +12,12 @@
 
 .custom-modal {
     background: #fff;
-    width: 40%;
     border-radius: 16px;
     position: relative;
     top: 20%;
-    left: 30%;
+    box-sizing: border-box;
 }
+
 
 .custom-modal-actions {
     width: 100%;
@@ -28,14 +28,12 @@
     text-align: right;
 }
 .custom-modal-body {
-    width: 100%;
     padding: 2em;
     text-align: center;
 }
 
 
 .custom-modal-header {
-    width: 100%;
     padding: 1em;
     display: flex;
     border-bottom: 1px solid #DDD !important;
@@ -45,7 +43,6 @@
 .custom-modal-header-left {
     vertical-align: center;
     float: left;
-    width: 100%;
     padding: .5em;
     text-align: left;
 
@@ -54,15 +51,17 @@
     float: right;
     width: 100%;
 }
+.custom-modal-actions >span {
+
+    margin-right: .5em !important;
+}
 .custom-modal-footer {
-    width: 100%;
-    padding: 0 1em;
+        padding: 0 1em;
     border-top: 1px solid #DDD !important;
     text-align: center;
 }
 
 .btns-custom-modal {
-    width: 100%;
     padding: 1em;
     text-align: right;
 }

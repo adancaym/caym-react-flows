@@ -1,30 +1,24 @@
-import { Container, Nav, Navbar } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap'
-
-import { RouterInterface } from '../../router'
+import {Link} from 'react-router-dom'
 import './Navigation.css';
+import {RouterInterface} from "../../router/types";
 
 interface NavProps {
     links: RouterInterface[];
     title?: string;
 }
-export const Navigation = ({ links, title }: NavProps) => {
+
+export const Navigation = ({links = [], title = 'Navigation'}: NavProps) => {
     return (
-        <Navbar bg="light">
-            <Container>
-                <Navbar.Brand href="#home">{title ? title : 'NavBar'}</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
-                        {links.map(e => (
-                            <LinkContainer key={e.path} to={e.path}>
-                                <Nav.Link >{e.label.toUpperCase()}</Nav.Link>
-                            </LinkContainer>
-                        ))}
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+        <nav>
+            <ul>
+                {title && <li><span>{title}</span></li>}
+                {links.map((link: RouterInterface) =>
+                    <li key={links.indexOf(link)}>
+                        <Link to={link.path}>{link.label}</Link>
+                    </li>
+                )}
+            </ul>
+        </nav>
     )
 }
 
