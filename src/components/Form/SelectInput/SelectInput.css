@@ -1,0 +1,25 @@
+.inputSelect {
+    width: 100% !important;
+}
+.inputSelect > label {
+    width: 90% !important;
+    margin-left: 5%;
+    display: inline-block;
+}
+.inputSelect > select{
+    background: transparent;
+    display: inline-block;
+    width: 90% !important;
+    margin-left: 5%;
+    border-bottom: 1px solid #ddd;
+    -webkit-transition: 0.5s;
+    border-top: 1px solid transparent !important;
+    border-left: 1px solid transparent !important;
+    border-right: 1px solid transparent !important;
+    padding: 1em;
+    font-weight: bold;
+}
+.inputSelect > select:focus {
+    border-bottom: 1px solid #333 !important;
+    outline: none;
+}

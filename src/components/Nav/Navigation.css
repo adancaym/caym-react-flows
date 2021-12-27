@@ -1,43 +1,38 @@
-nav {
-    width: 100vw;
-    background: #ddd;
-    border-radius: 5px;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
 }
 
-nav > ul {
-    width: 90%;
-    margin-left: 5%;
+li {
+    float: left;
 }
 
-nav > ul > li {
-    width: 10%;
-    vertical-align: middle;
-    display: inline-block;
-    line-height: normal;
-    height: 10vh;
-}
-nav > ul > li > a  {
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    padding: 1.5em;
-    text-align: center;
-    display: block;
-    width: 100%;
-    color: black;
-    height: 10vh;
 }
 
-nav > ul > li > span {
-    font-size: 1.5em;
-    text-align: center;
-    display: block;
-    width: 100%;
-    color: black;
-    height: 10vh;
-    margin-top: .63em;
+li a:hover:not(.active) {
+    background-color: #ddd;
 }
 
-nav > ul > li > a:hover, nav > ul > li > span:hover {
+li a.active {
     color: black;
+    background-color: #DDD;
+    font-weight: bold;
+
 }
 
+li a.main {
+    color: black;
+    background-color: #AAA;
+    font-weight: bold;
 
+}

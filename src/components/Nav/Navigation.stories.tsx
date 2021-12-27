@@ -1,6 +1,5 @@
 import {ComponentStory, ComponentMeta} from '@storybook/react';
 import {Navigation} from "./Navigation";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter} from "react-router-dom";
 
 export default {

@@ -1,0 +1,27 @@
+.inputText {
+    width: 100% !important;
+}
+.inputText > label {
+    width: 90% !important;
+    margin-left: 5%;
+    display: inline-block;
+
+}
+.inputText > input[type=text] {
+    background: transparent;
+    display: inline-block;
+    width: 90% !important;
+    margin-left: 5%;
+    border-bottom: 1px solid #ddd;
+    -webkit-transition: 0.5s;
+    border-top: 1px solid transparent !important;
+    border-left: 1px solid transparent !important;
+    border-right: 1px solid transparent !important;
+    padding: 1em;
+    font-weight: bold;
+}
+.inputText > input[type=text]:focus {
+    border-bottom: 1px solid #333 !important;
+    outline: none;
+
+}

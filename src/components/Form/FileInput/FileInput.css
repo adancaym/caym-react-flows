@@ -1,0 +1,23 @@
+.inputFile {
+    width: 100% !important;
+}
+.inputFile > label {
+    width: 90% !important;
+    margin-left: 5%;
+    display: inline-block;
+}
+.inputFile > input[type=file] {
+    background: transparent;
+    display: inline-block;
+    width: 90% !important;
+    margin-left: 5%;
+    -webkit-transition: 0.5s;
+    border-top: 1px solid transparent !important;
+    border-left: 1px solid transparent !important;
+    border-right: 1px solid transparent !important;
+    padding: 1em;
+    font-weight: bold;
+}
+.inputFile > input[type=file]:focus {
+    outline: none;
+}
